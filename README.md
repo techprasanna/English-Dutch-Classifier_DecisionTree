@@ -28,3 +28,11 @@ c. Not_Present
 6. For predicting the data, we load the trained object from the file and again process the dataset through all the features and converting the data into values of “Present” and “Not Present”.
 7. We now process the dataset line by line and pass through the trained object. The evaluation is the class of the language. i.e. “en” or “nl”
 8. The prediction accuracy of the algorithm is 90% for the dataset provided by the instructor.
+# How to run the application
+train <examples> <hypothesisOut> <learning-type> should read in labeled examples and perform some sort of training.
+examples is a file containing labeled examples.
+hypothesisOut specifies the file name to write your model to.
+learning-type specifies the type of learning algorithm you will run, it is "dt"
+predict <hypothesis> <file> Your program should classify each line as either English or Dutch using the specified model. Note that this must not do any training, but should take a model and make a prediction about the input. For each input example, your program should simply print its predicted label on a newline. For example. It should not print anything else.
+hypothesis is a trained decision tree or ensemble created by your train program
+file is a file containing lines of 15 word sentence fragments in either English or Dutch
